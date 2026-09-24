@@ -59,10 +59,6 @@
       });
     }, {rootMargin: '0px 0px -60px 0px', threshold: .06});
     reveals.forEach(node => observer.observe(node));
-    if (document.querySelector('.hero-art')) {
-      gsap.to('.orbit-a', {rotation: 360, duration: 80, repeat: -1, ease: 'none'});
-      gsap.to('.orbit-b', {rotation: -360, duration: 100, repeat: -1, ease: 'none'});
-    }
   }
 
   // Move by exactly one complete group; every group begins with the same word.
