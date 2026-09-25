@@ -6,8 +6,7 @@
   const setTheme = (theme) => {
     root.dataset.theme = theme;
     themeButton?.setAttribute('aria-pressed', String(theme === 'dark'));
-    const icon = themeButton?.querySelector('.theme-icon');
-    if (icon) icon.textContent = theme === 'dark' ? '☀' : '◐';
+    themeButton?.setAttribute('data-theme-state', theme);
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#111a1a' : '#f4f0e8');
   };
   setTheme(root.dataset.theme === 'dark' ? 'dark' : 'light');
